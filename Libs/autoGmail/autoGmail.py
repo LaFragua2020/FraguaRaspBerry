@@ -46,9 +46,6 @@ class AutoGmail():
             else:
                 print("No se pueden mandar correos tan seguido!")
                 
-
-                
-
         except Exception as e:
             print(e)
             print("error, posiblemente no se pudo conectar a GS.")
@@ -84,4 +81,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    AG=AutoGmail()
+    AG.conecta()
+    sleep(10)
+    AG.enviaMail(destino="g.gutierrez.gagliardi@gmail.com",titulo="Hola",parrafo1="asdsad",parrafo2="dadasfa")
