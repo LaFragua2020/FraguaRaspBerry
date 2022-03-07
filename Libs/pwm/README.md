@@ -1,7 +1,10 @@
 # PWM
-Taller RaspBerryFragua
 
 
+Diagrama de conexión utilizado en ejemplo:
 
-Diagrama de conexión:
+Buzzer:
 ![DiagramaPWM](DiagramaBuzzer.png)
+
+Led:
+![DiagramaPWM](DiagramaLed.png)
