@@ -3,5 +3,6 @@
 
 Diagrama de conexión utilizado en ejemplo:
 
-ej PWM:
+Stepper:
+
 ![DiagramaPWM](DiagramaStepper.png)
