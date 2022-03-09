@@ -13,7 +13,7 @@ def salir():
 def tecla(key):
     print(key)
     if key==Key.esc:
-        salir()jhu
+        salir()
 
 
 camera = PiCamera()
