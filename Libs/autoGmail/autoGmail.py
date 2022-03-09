@@ -77,11 +77,11 @@ class AutoGmail():
 def main():
     AG=AutoGmail()
     AG.conecta()
-    AG.enviaMail(destino="g.gutierrez.gagliardi@gmail.com",titulo="Hola",parrafo1="asdsad",parrafo2="dadasfa")
+    AG.enviaMail(destino="g.gutierrez.gagliardi@gmail.com",titulo="Hola",parrafo1="Qué tal?",parrafo2="--")
 
 
 if __name__ == '__main__':
     AG=AutoGmail()
     AG.conecta()
     sleep(10)
-    AG.enviaMail(destino="g.gutierrez.gagliardi@gmail.com",titulo="Hola",parrafo1="asdsad",parrafo2="dadasfa")
+    AG.enviaMail(destino="g.gutierrez.gagliardi@gmail.com",titulo="Hola",parrafo1="Qué tal?",parrafo2="--")
