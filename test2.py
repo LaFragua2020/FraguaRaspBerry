@@ -10,10 +10,16 @@ def salir():
     listener.stop()
     sys.exit()
 
+def grabar():
+    print("grabando imagen")
+    camera.capture('foto.png')
+
 def tecla(key):
     print(key)
     if key==Key.esc:
         salir()
+    elif key==Key.space:
+        grabar()
 
 
 camera = PiCamera()
@@ -22,5 +28,3 @@ listener.start()
 camera.start_preview(fullscreen=False, window=(100,200,480,640))
 while True:
     pass
-
-
