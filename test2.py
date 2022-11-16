@@ -28,6 +28,3 @@ listener.start()
 camera.start_preview(fullscreen=False, window=(100,200,480,640))
 while True:
     pass
-
-
- 
