@@ -40,7 +40,10 @@ class Detector():
         key = cv2.waitKey(1) #& 0xFF
         return(key)
 
-        
+    def guardafoto(self,nombre):
+        frame = self.vs.read()
+        frame = imutils.resize(frame, width=self.ANCHO)
+        cv2.imwrite(nombre+".png", frame)
         
     # loop over frames from the video file stream
     def foto(self,mostrar):
@@ -151,8 +154,11 @@ if __name__ == '__main__':
                 print("coordenada x: ", cara["centro"][0])
                 print("coordenada y: ", cara["centro"][1])
                 print("área: ", cara["area"])
+            detect.guardafoto("testCV")
+            
         #key = cv2.waitKey(1) & 0xFF
         #cv2.pollKey(1)
         #if key == ord("q"):
          #   break
     detect.stop()
+
