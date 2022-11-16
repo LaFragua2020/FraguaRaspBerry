@@ -13,7 +13,7 @@ class AutoGmail():
 
     def enviaMail(self, destino, titulo, parrafo1, adjunto = None):
         try:
-            if self.cooldown+timedelta(seconds=10) < datetime.now():
+            if self.cooldown < datetime.now():
                 print("Enviando mail..")
                 message = EmailMessage()
                 if adjunto:
@@ -50,7 +50,8 @@ class AutoGmail():
                     #server.sendmail("ggmodsa1@gmail.com", "g.gutierrez.gagliardi@gmail.com", message)
                     server.send_message(message)
                     server.quit()
-                self.cooldown=datetime.now()         
+                self.cooldown=datetime.now()+timedelta(seconds=15)
+                print("mail enviado.")
             else:
                 print("No se pueden mandar correos tan seguido!")     
         except Exception as e:
@@ -67,4 +68,4 @@ if __name__ == '__main__':
     correoDestino="g.gutierrez.gagliardi@gmail.com"
     archivoAdjunto="icon.png"
     AG.enviaMail(destino=correoDestino,titulo="Hola",parrafo1=mensaje, adjunto=archivoAdjunto)
-    print("mail enviado.")
+    
