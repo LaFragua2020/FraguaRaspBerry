@@ -14,4 +14,5 @@ Diagrama pines RaspBerryPi 3B+:
 
 
 Para importar las librerías a un nuevo programa:
+> **from Libs.librería import librería**
 
