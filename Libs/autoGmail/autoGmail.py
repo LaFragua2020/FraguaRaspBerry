@@ -28,7 +28,7 @@ class AutoGmail():
                     .
                     .
                     """                    
-                sender = "ggmodsa1@gmail.com"
+                sender = "lafraguabot@gmail.com"
                 recipient = destino
                 message['From'] = sender
                 message['To'] = recipient
@@ -46,8 +46,7 @@ class AutoGmail():
                 port = 465
                 context = ssl.create_default_context()
                 with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-                    server.login("ggmodsa1@gmail.com", "ozlmorjdpftjeesc")
-                    #server.sendmail("ggmodsa1@gmail.com", "g.gutierrez.gagliardi@gmail.com", message)
+                    server.login("lafraguabot@gmail.com", "biujlqcynnpagclm")
                     server.send_message(message)
                     server.quit()
                 self.cooldown=datetime.now()+timedelta(seconds=15)
